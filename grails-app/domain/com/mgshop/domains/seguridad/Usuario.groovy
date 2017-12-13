@@ -4,9 +4,16 @@ import com.mgshop.domains.ArticuloCarrito
 import com.mgshop.domains.Compra
 import com.sparkpost.Client
 import com.sparkpost.exception.SparkPostException
+import grails.compiler.GrailsCompileStatic
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 
-
+@GrailsCompileStatic
+@EqualsAndHashCode(includes='authority')
+@ToString(cache=true, includeNames=true, includePackage=false)
 class Usuario  implements Serializable {
+
+    long id
 
     String nombre
     String correoElectronico

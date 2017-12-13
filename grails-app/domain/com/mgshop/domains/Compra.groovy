@@ -27,10 +27,10 @@ class Compra  implements Serializable {
 
     static constraints = {
     }
-
-    List listX = [new Compra("dateCreated" as Map)]
-    def jsonStringX = (listX as JSON).toString()
-
-    List listY= [new Compra("total" as Map)]
-    def jsonStringY = (listY as JSON).toString()
+//
+//    List listX = [new Compra("dateCreated" as Map)]
+//    def jsonStringX = (listX as JSON).toString()
+//
+//    List listY= [new Compra("total" as Map)]
+//    def jsonStringY = (listY as JSON).toString()
 }

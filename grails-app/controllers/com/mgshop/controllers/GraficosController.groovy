@@ -8,6 +8,6 @@ import grails.plugin.springsecurity.annotation.Secured
 class GraficosController {
 
     def index() {
-        [jsonMapx: Compra.jsonStringX, jsonMapy: Compra.jsonStringY]
+//        [jsonMapx: Compra.jsonStringX, jsonMapy: Compra.jsonStringY]
     }
 }

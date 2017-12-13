@@ -2,15 +2,18 @@ package com.mgshop.domains.seguridad
 
 import grails.compiler.GrailsCompileStatic
 import grails.gorm.DetachedCriteria
+import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
-import org.codehaus.groovy.util.HashCodeHelper
 
 
 @GrailsCompileStatic
+@EqualsAndHashCode(includes='authority')
 @ToString(cache=true, includeNames=true, includePackage=false)
 class UsuarioPerfil implements Serializable {
 
     private static final long serialVersionUID = 1
+
+    long id
 
     Usuario usuario
     Perfil perfil
@@ -44,9 +47,8 @@ class UsuarioPerfil implements Serializable {
     }
 
     private static DetachedCriteria criteriaFor(long usuarioId, long perfilId) {
-        UsuarioPerfil.where {
-            usuario == Usuario.load(usuarioId) &&
-                    perfil == Perfil.load(perfilId)
+        where {
+            usuario == Usuario.findById(usuarioId) && perfil == Perfil.findById(perfilId)
         }
     }
 
@@ -58,23 +60,23 @@ class UsuarioPerfil implements Serializable {
 
     static boolean remove(Usuario u, Perfil r) {
         if (u != null && r != null) {
-            UsuarioPerfil.where { usuario == u && perfil == r }.deleteAll()
+            where { usuario == u && perfil == r }.deleteAll()
         }
     }
 
     static int removeAll(Usuario u) {
-        u == null ? 0 : UsuarioPerfil.where { usuario == u }.deleteAll() as int
+        u == null ? 0 : where { usuario == u }.deleteAll() as int
     }
 
     static int removeAll(Perfil r) {
-        r == null ? 0 : UsuarioPerfil.where { perfil == r }.deleteAll() as int
+        r == null ? 0 : where { perfil == r }.deleteAll() as int
     }
 
     static constraints = {
         usuario nullable: false
         perfil nullable: false, validator: { Perfil r, UsuarioPerfil ur ->
-            if (ur.usuario?.id) {
-                if (UsuarioPerfil.exists(ur.usuario.id, r.id)) {
+            if (ur.usuario.id) {
+                if (exists(ur.usuario.id, r.id)) {
                     return ['userRole.exists']
                 }
             }
