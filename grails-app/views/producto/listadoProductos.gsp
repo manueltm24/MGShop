@@ -1,4 +1,3 @@
-<%@ page import="com.mgshop.domains.seguridad.Perfil" %>
 <g:applyLayout name="main">
     <content tag="body">
         <section class="section light-backgorund">
@@ -31,9 +30,9 @@
                                         <td>${producto.quantity}</td>
                                         <td>
 
-                                            <g:link action="#" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
+                                            <g:link action="#" controller="producto" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
 
-                                            <g:form params="[idUsuario: usuario.id]" action="eliminarUsuario" >
+                                            <g:form params="[idProducto: producto.id]" action="eliminarUsuario" >
                                                 <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>
                                             </g:form>
 

@@ -15,11 +15,12 @@ class BootStrap {
 
         Usuario usuario =Usuario.findByNombre("Administrador") ? null :new Usuario(username: "admin", correoElectronico: "admin@gmail.com", password: "admin", nombre: "Administrador").save(flush: true, failOnError: true)
 
+        Perfil.findByAuthority("ROLE_DEPARTAMENTOALMACEN") ?: new Perfil(authority: "ROLE_DEPARTAMENTOALMACEN",permisos: "Departamento Almacen").save(flush: true, failOnError: true)
+        Perfil.findByAuthority("ROLE_CONSUMIDORFINAL") ?: new Perfil(authority: "ROLE_CONSUMIDORFINAL",permisos: "Consumidor Final").save(flush: true, failOnError: true)
+        Perfil.findByAuthority("ROLE_PERSONAJURIDICA") ?: new Perfil(authority: "ROLE_PERSONAJURIDICA", permisos: "Persona Juridica").save(flush: true, failOnError: true)
+        Perfil.findByAuthority("ROLE_ADMIN") ?: new Perfil(authority: "ROLE_ADMIN", permisos: "Administrador").save(flush: true, failOnError: true)
+
         if(usuario) {
-            Perfil.findByAuthority("ROLE_DEPARTAMENTOALMACEN") ?: new Perfil(authority: "ROLE_DEPARTAMENTOALMACEN",permisos: "Departamento Almacen").save(flush: true, failOnError: true)
-            Perfil.findByAuthority("ROLE_CONSUMIDORFINAL") ?: new Perfil(authority: "ROLE_CONSUMIDORFINAL",permisos: "Consumidor Final").save(flush: true, failOnError: true)
-            Perfil.findByAuthority("ROLE_PERSONAJURIDICA") ?: new Perfil(authority: "ROLE_PERSONAJURIDICA", permisos: "Persona Juridica").save(flush: true, failOnError: true)
-            Perfil.findByAuthority("ROLE_ADMIN") ?: new Perfil(authority: "ROLE_ADMIN", permisos: "Administrador").save(flush: true, failOnError: true)
 
 
             UsuarioPerfil.create(usuario, Perfil.findByAuthority("ROLE_ADMIN"))

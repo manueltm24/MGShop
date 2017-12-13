@@ -4,6 +4,8 @@ import com.mgshop.domains.ArticuloCompra
 import com.mgshop.domains.Compra
 import com.mgshop.domains.seguridad.Perfil
 import com.mgshop.domains.seguridad.Usuario
+import com.mgshop.domains.Producto
+
 import com.mgshop.domains.seguridad.UsuarioPerfil
 import grails.plugin.springsecurity.annotation.Secured
 
@@ -41,12 +43,19 @@ class CarritoController {
 
         compra.save(failOnError: true, flush: true)
 
+
+
         compra.products = []
         usuario.carroDeCompras.each { articuloCarrito ->
 
             ArticuloCompra articuloCompra = new ArticuloCompra(producto: articuloCarrito.producto, cantidad: articuloCarrito.cantidad)
             articuloCompra.save(failOnError: true, flush: true)
             compra.products.add(articuloCompra)
+
+            Producto producto = Producto.findById(articuloCompra.producto.id)
+            producto.quantity--
+            producto.save(failOnError: true, flush: true)
+
 
         }
         compra.save(failOnError: true, flush: true)
