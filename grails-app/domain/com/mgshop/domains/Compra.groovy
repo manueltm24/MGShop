@@ -1,6 +1,7 @@
 package com.mgshop.domains
 
 import com.mgshop.domains.seguridad.Usuario
+import grails.converters.JSON
 
 class Compra  implements Serializable {
     boolean isVerified = false// Confirms the user received the order.
@@ -26,4 +27,10 @@ class Compra  implements Serializable {
 
     static constraints = {
     }
+
+    List listX = [new Compra("dateCreated" as Map)]
+    def jsonStringX = (listX as JSON).toString()
+
+    List listY= [new Compra("total" as Map)]
+    def jsonStringY = (listY as JSON).toString()
 }
