@@ -28,7 +28,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-10 col-lg-12">
                             <g:form action="procesarNuevoUsuario_editar" class="form-horizontal">
-                                <input type="text" class="form-control input-md" id="idUsuario"  value="${usuario.id}" name="idUsuario" placeholder="Nombre">
+                                <input hidden="hidden" type="text" class="form-control input-md" id="idUsuario"  value="${usuario.id}" name="idUsuario" placeholder="Nombre">
 
                                 <div class="form-group">
                                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                     <label for="permisos" class="col-sm-2 control-label">Contraseña <span class="text-danger">*</span></label>
                                     <div class="col-sm-10">
-                                        <g:select id="permisos" name="permisos" noSelection="['':com.mgshop.domains.seguridad.UsuarioPerfil.findByUsuario(usuario).perfil.permisos]" class="form-control" from="${com.mgshop.domains.seguridad.Perfil.list()}" optionKey="id" optionValue="permisos" data-validation="required"/>
+                                        <g:select id="permisos" name="permisos" value="${com.mgshop.domains.seguridad.UsuarioPerfil.findByUsuario(usuario).perfil}" class="form-control" from="${com.mgshop.domains.seguridad.Perfil.list()}" optionKey="id" optionValue="permisos" data-validation="required"/>
 
                                     </div>
                                 </div><!-- end form-group -->
