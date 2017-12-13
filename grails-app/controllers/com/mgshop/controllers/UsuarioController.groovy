@@ -14,8 +14,14 @@ class UsuarioController {
     def procesarNuevoUsuario(String username,String nombre, String correoElectronico, String password, String permisos){
         println(params)
         Usuario usuario = new Usuario(username: username, nombre: nombre, correoElectronico:correoElectronico,password: password)
+        Usuario.enviarCorreoNuevoUsuario(usuario)
+
+
         usuario.save(flush:true,failOnError:true)
 
+
+        UsuarioPerfil usuarioPerfil = new UsuarioPerfil(usuario: usuario, perfil: Perfil.findById(Long.parseLong(permisos)))
+        usuarioPerfil.save(flush:true,failOnError:true)
 
 
         redirect(uri:"/usuario/listadoUsuarios")
