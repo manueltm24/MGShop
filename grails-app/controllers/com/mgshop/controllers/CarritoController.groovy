@@ -2,7 +2,9 @@ package com.mgshop.controllers
 
 import com.mgshop.domains.ArticuloCompra
 import com.mgshop.domains.Compra
+import com.mgshop.domains.seguridad.Perfil
 import com.mgshop.domains.seguridad.Usuario
+import com.mgshop.domains.seguridad.UsuarioPerfil
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(["ROLE_ADMIN", "ROLE_USUARIO"])
@@ -56,6 +58,8 @@ class CarritoController {
         }
 
         usuario.refresh()
+
+        Usuario.enviarCorreoUsuarioDespacho(UsuarioPerfil.findAllByPerfil(Perfil.findByAuthority("ROLE_DEPARTAMENTOALMACEN")).usuario,compra)
 
 
         redirect(uri:"/")
