@@ -44,7 +44,7 @@ class UsuarioPerfil implements Serializable {
     }
 
     private static DetachedCriteria criteriaFor(long usuarioId, long perfilId) {
-        UsuarioPerfil.where {
+        where {
             usuario == Usuario.load(usuarioId) &&
                     perfil == Perfil.load(perfilId)
         }
@@ -58,23 +58,23 @@ class UsuarioPerfil implements Serializable {
 
     static boolean remove(Usuario u, Perfil r) {
         if (u != null && r != null) {
-            UsuarioPerfil.where { usuario == u && perfil == r }.deleteAll()
+            where { usuario == u && perfil == r }.deleteAll()
         }
     }
 
     static int removeAll(Usuario u) {
-        u == null ? 0 : UsuarioPerfil.where { usuario == u }.deleteAll() as int
+        u == null ? 0 : where { usuario == u }.deleteAll() as int
     }
 
     static int removeAll(Perfil r) {
-        r == null ? 0 : UsuarioPerfil.where { perfil == r }.deleteAll() as int
+        r == null ? 0 : where { perfil == r }.deleteAll() as int
     }
 
     static constraints = {
         usuario nullable: false
         perfil nullable: false, validator: { Perfil r, UsuarioPerfil ur ->
             if (ur.usuario?.id) {
-                if (UsuarioPerfil.exists(ur.usuario.id, r.id)) {
+                if (exists(ur.usuario.id, r.id)) {
                     return ['userRole.exists']
                 }
             }

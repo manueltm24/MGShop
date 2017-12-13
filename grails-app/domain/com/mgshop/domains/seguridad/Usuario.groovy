@@ -17,11 +17,6 @@ class Usuario {
     String zip
 
 
-    boolean enabled = true
-    boolean accountExpired
-    boolean accountLocked
-    boolean passwordExpired
-
     Set<Perfil> getAuthorities() {
         (UsuarioPerfil.findAllByUsuario(this) as List<UsuarioPerfil>)*.perfil as Set<Perfil>
     }
