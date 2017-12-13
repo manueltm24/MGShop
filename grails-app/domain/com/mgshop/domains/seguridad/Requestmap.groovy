@@ -1,9 +1,10 @@
 package com.mgshop.domains.seguridad
 
-import grails.compiler.GrailsCompileStatic
+import org.springframework.http.HttpMethod
+
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
-import org.springframework.http.HttpMethod
+import grails.compiler.GrailsCompileStatic
 
 @GrailsCompileStatic
 @EqualsAndHashCode(includes=['configAttribute', 'httpMethod', 'url'])
@@ -23,7 +24,7 @@ class Requestmap implements Serializable{
     }
 
     static mapping = {
-        table 'seguridad_requestmap'
+        table 'seg_requestmap'
         cache true
     }
 }

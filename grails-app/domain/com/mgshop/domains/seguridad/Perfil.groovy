@@ -1,8 +1,8 @@
 package com.mgshop.domains.seguridad
 
-import grails.compiler.GrailsCompileStatic
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
+import grails.compiler.GrailsCompileStatic
 
 @GrailsCompileStatic
 @EqualsAndHashCode(includes='authority')
@@ -12,6 +12,7 @@ class Perfil implements Serializable{
     private static final long serialVersionUID = 1
 
     String authority
+
     String permisos
 
     static constraints = {
@@ -19,7 +20,7 @@ class Perfil implements Serializable{
     }
 
     static mapping = {
-        table 'seguridad_perfil'
+        table 'seg_perfil'
         cache true
     }
 

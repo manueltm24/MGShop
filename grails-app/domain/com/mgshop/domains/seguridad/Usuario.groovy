@@ -8,10 +8,7 @@ import grails.compiler.GrailsCompileStatic
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
-@GrailsCompileStatic
-@EqualsAndHashCode(includes='authority')
-@ToString(cache=true, includeNames=true, includePackage=false)
-class Usuario  implements Serializable {
+class Usuario  {
 
     long id
 
