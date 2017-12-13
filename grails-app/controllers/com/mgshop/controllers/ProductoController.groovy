@@ -1,6 +1,7 @@
 package com.mgshop.controllers
 
 import com.mgshop.domains.Producto
+import com.mgshop.domains.seguridad.Usuario
 import grails.plugin.springsecurity.annotation.Secured
 import org.springframework.web.multipart.MultipartFile
 
@@ -51,5 +52,10 @@ class ProductoController {
         OutputStream out = response.outputStream
         out.write(product.productImage)
         out.close()
+    }
+
+    def listadoProductos(){
+        [listadoProductos: Producto.findAllByHabilitado(true)]
+
     }
 }

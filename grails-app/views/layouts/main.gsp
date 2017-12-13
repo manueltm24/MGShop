@@ -206,6 +206,8 @@
                         <li><a href="/usuario/listadoUsuarios">Listado de usuarios</a></li>
                     </ul><!-- end ul dropdown-menu -->
                 </li><!-- end li dropdown -->
+                <li class="dropdown active"><a href="/graficos/index">Graficos</a></li>
+
             </ul><!-- end navbar-nav -->
         </div><!-- end navbar collapse -->
     </div><!-- end container -->
