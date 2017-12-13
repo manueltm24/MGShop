@@ -190,13 +190,13 @@
         </div>
         <div id="navbar-collapse-3" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown active"><a href="/">Tienda</a></li>
+                <li><a href="/">Tienda</a></li>
 
 
                 <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Productos<i class="fa fa-angle-down ml-5"></i></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="/producto/crearProducto">Crear producto</a></li>
-                        <li><a href="home-v2.html">Listado de productos</a></li>
+                        <li><a href="/producto/listadoProductos">Listado de productos</a></li>
                     </ul><!-- end ul dropdown-menu -->
                 </li><!-- end li dropdown -->
             <!-- Features -->
@@ -206,7 +206,7 @@
                         <li><a href="/usuario/listadoUsuarios">Listado de usuarios</a></li>
                     </ul><!-- end ul dropdown-menu -->
                 </li><!-- end li dropdown -->
-                <li class="dropdown active"><a href="/graficos/index">Graficos</a></li>
+                <li ><a href="/graficos/index">Gráficos</a></li>
 
             </ul><!-- end navbar-nav -->
         </div><!-- end navbar collapse -->

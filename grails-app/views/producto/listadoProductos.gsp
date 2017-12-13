@@ -31,16 +31,11 @@
                                         <td>${producto.quantity}</td>
                                         <td>
 
-                                            <g:if test="${com.mgshop.domains.seguridad.UsuarioPerfil.findByUsuario(usuario).perfil.authority=="ROLE_ADMIN"}">
-                                                <label>-</label>
-                                            </g:if>
-                                            <g:else>
-                                                <g:link action="#" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
+                                            <g:link action="#" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
 
-                                                <g:form params="[idUsuario: usuario.id]" action="eliminarUsuario" >
-                                                    <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>
-                                                </g:form>
-                                            </g:else>
+                                            <g:form params="[idUsuario: usuario.id]" action="eliminarUsuario" >
+                                                <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>
+                                            </g:form>
 
 
 
