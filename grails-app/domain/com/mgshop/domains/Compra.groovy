@@ -2,7 +2,7 @@ package com.mgshop.domains
 
 import com.mgshop.domains.seguridad.Usuario
 
-class Compra {
+class Compra  implements Serializable {
     boolean isVerified = false// Confirms the user received the order.
     boolean isProcessed= false // Confirms order was processed.
     boolean emailSent = false// Email sent to guys.

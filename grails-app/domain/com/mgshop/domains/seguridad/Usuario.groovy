@@ -3,7 +3,7 @@ package com.mgshop.domains.seguridad
 import com.mgshop.domains.ArticuloCarrito
 
 
-class Usuario {
+class Usuario  implements Serializable {
 
     String nombre
     String correoElectronico
@@ -16,6 +16,11 @@ class Usuario {
     String address
     String zip
 
+
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
 
     Set<Perfil> getAuthorities() {
         (UsuarioPerfil.findAllByUsuario(this) as List<UsuarioPerfil>)*.perfil as Set<Perfil>

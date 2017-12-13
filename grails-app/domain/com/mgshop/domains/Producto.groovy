@@ -1,6 +1,6 @@
 package com.mgshop.domains
 
-class Producto {
+class Producto  implements Serializable {
 
     byte[] productImage
     String imageType

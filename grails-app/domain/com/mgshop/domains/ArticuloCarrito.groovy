@@ -1,6 +1,6 @@
 package com.mgshop.domains
 
-class ArticuloCarrito {
+class ArticuloCarrito  implements Serializable  {
 
     Producto producto
     int cantidad
