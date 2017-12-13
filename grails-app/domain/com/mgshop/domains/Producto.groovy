@@ -9,8 +9,12 @@ class Producto  implements Serializable {
     double price
     Integer quantity
 
-    Date dateCreated
-    Date lastUpdated
+    //Datos genericos del dominio.
+    boolean habilitado = true;
+    String creadoPor = "sistemas";
+    String modificadoPor = "sistemas";
+    Date dateCreated;
+    Date lastUpdated;
 
     static constraints = {
         title blank: false

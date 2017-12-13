@@ -1,3 +1,4 @@
+<%@ page import="com.mgshop.domains.seguridad.Perfil" %>
 <g:applyLayout name="main">
     <content tag="body">
         <section class="section light-backgorund">
@@ -19,6 +20,7 @@
                                     <th>#</th>
                                     <th>Nombre</th>
                                     <th>Correo electronico</th>
+                                    <th>Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -27,6 +29,22 @@
                                     <th scope="row">${usuario.id}</th>
                                     <td>${usuario.nombre}</td>
                                     <td>${usuario.correoElectronico}</td>
+                                    <td>
+
+                                        <g:if test="${com.mgshop.domains.seguridad.UsuarioPerfil.findByUsuario(usuario).perfil.authority=="ROLE_ADMIN"}">
+                                            <label>-</label>
+                                        </g:if>
+                                        <g:else>
+                                            <g:link action="#" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
+
+                                            <g:form params="[idUsuario: usuario.id]" action="eliminarUsuario" >
+                                                <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>
+                                            </g:form>
+                                        </g:else>
+
+
+
+                                    </td>
                                 </tr>
                                 </g:each>
                                 </tbody>

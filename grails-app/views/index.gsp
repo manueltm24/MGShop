@@ -1,5 +1,6 @@
 <g:applyLayout name="main">
 
+
     <content tag="body">
         <!-- start section -->
         <section class="section white-background">

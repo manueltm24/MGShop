@@ -14,8 +14,12 @@ class Compra  implements Serializable {
     BigDecimal total
     String txnId
 
-    Date dateCreated
-    Date lastUpdated
+    //Datos genericos del dominio.
+    boolean habilitado = true;
+    String creadoPor = "sistemas";
+    String modificadoPor = "sistemas";
+    Date dateCreated;
+    Date lastUpdated;
 
     static belongsTo = [user: Usuario]
     static hasMany = [products: ArticuloCompra]

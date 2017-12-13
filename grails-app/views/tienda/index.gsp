@@ -258,25 +258,25 @@
         <!-- end section -->
 
         <!-- start section -->
-        <section class="primary-background">
-            <div class="container">
-                <div class="box-banner-wide primary-background">
-                    <div class="row">
-                        <div class="col-sm-4 vertical-align">
-                            <h2 class="alt-font text-uppercase text-white">
-                                Free <span class="regular">Delivery days!</span>
-                            </h2>
-                        </div><!-- end col -->
-                        <div class="col-sm-4 vertical-align">
-                            <p class="mt-20">Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem.</p>
-                        </div><!-- end col -->
-                        <div class="col-sm-4 vertical-align text-right">
-                            <a target="_blank" href="https://wrapbootstrap.com/theme/plus-responsive-e-commerce-template-WB0R2CN86" class="btn btn-light semi-circle btn-md">Purchase</a>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end box-banner-wide -->
-            </div><!-- end container -->
-        </section>
+        %{--<section class="primary-background">--}%
+            %{--<div class="container">--}%
+                %{--<div class="box-banner-wide primary-background">--}%
+                    %{--<div class="row">--}%
+                        %{--<div class="col-sm-4 vertical-align">--}%
+                            %{--<h2 class="alt-font text-uppercase text-white">--}%
+                                %{--Free <span class="regular">Delivery days!</span>--}%
+                            %{--</h2>--}%
+                        %{--</div><!-- end col -->--}%
+                        %{--<div class="col-sm-4 vertical-align">--}%
+                            %{--<p class="mt-20">Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem.</p>--}%
+                        %{--</div><!-- end col -->--}%
+                        %{--<div class="col-sm-4 vertical-align text-right">--}%
+                            %{--<a target="_blank" href="https://wrapbootstrap.com/theme/plus-responsive-e-commerce-template-WB0R2CN86" class="btn btn-light semi-circle btn-md">Purchase</a>--}%
+                        %{--</div><!-- end col -->--}%
+                    %{--</div><!-- end row -->--}%
+                %{--</div><!-- end box-banner-wide -->--}%
+            %{--</div><!-- end container -->--}%
+        %{--</section>--}%
         <!-- end section -->
 
         <!-- start section -->

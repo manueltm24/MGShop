@@ -1,5 +1,7 @@
 package mgshop
 
+import com.mgshop.domains.seguridad.Usuario
+
 class UrlMappings {
 
     static mappings = {

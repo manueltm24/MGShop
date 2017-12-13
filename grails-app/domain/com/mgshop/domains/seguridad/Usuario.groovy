@@ -19,6 +19,13 @@ class Usuario  implements Serializable {
     String address
     String zip
 
+    //Datos genericos del dominio.
+    boolean habilitado = true;
+    String creadoPor = "sistemas";
+    String modificadoPor = "sistemas";
+    Date dateCreated;
+    Date lastUpdated;
+
 
     boolean enabled = true
     boolean accountExpired
@@ -82,4 +89,5 @@ class Usuario  implements Serializable {
 
 
     }
+
 }

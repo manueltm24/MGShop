@@ -14,7 +14,9 @@ class TiendaController {
 
 
     def index() {
-        [listadoProductos:Producto.findAll()]
+        Usuario usuario = (Usuario)springSecurityService.currentUser
+
+        [usuario:usuario,listadoProductos:Producto.findAllByHabilitado(true)]
     }
 
     def anadirCarrito(){
@@ -25,30 +27,6 @@ class TiendaController {
         articuloCarrito.save(flush:true, failOnError:true)
         usuario.carroDeCompras.add(articuloCarrito)
         usuario.save(flush:true, failOnError:true)
-
-
-
-//        if(request.getSession(false) != null){
-//            HttpSession session = request.getSession()
-//            if(session.getAttribute("carritoUsuario")){
-//                List<Producto> listadoProductos = (List<Producto>)session.getAttribute("carritoUsuario")
-//                listadoProductos.add(Producto.findById(Long.parseLong(idProducto)))
-//                session.setAttribute("carritoUsuario",listadoProductos)
-//                println session.getAttribute("carritoUsuario")
-//
-//
-//            }
-//            else{
-//                List<Producto> listadoProductos = new ArrayList<>()
-//                listadoProductos.add(Producto.findById(Long.parseLong(idProducto)))
-//                session.setAttribute("carritoUsuario",listadoProductos)
-//
-//                println session.getAttribute("carritoUsuario")
-//
-//            }
-//        }
-
-
 
         redirect(uri:"/")
 

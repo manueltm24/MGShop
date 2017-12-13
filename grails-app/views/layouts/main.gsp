@@ -70,7 +70,7 @@
 <div class="topBar">
     <div class="container">
         <ul class="list-inline pull-left hidden-sm hidden-xs">
-            <li><span class="text-primary">Have a question?</span> Call +123 4567 8910</li>
+            <li><span class="text-primary">¿Tiene alguna pregunta?</span> Contactenos: <b>Manuel Tolentino (2012-0467) , Gustavo Henríquez (2013-0216)</b></li>
         </ul>
 
         <ul class="topBarNav pull-right">
@@ -91,71 +91,73 @@
                     <li><a href="checkout.html">Checkout</a></li>
                 </ul>
             </li>
-            <li class="linkdown">
-                <a href="javascript:void(0);">
-                    <i class="fa fa-shopping-basket mr-5"></i>
-                    <span class="hidden-xs">
-                        Cart<sup class="text-primary">(3)</sup>
-                        <i class="fa fa-angle-down ml-5"></i>
-                    </span>
-                </a>
-                <ul class="cart w-250">
-                    <li>
-                        <div class="cart-items">
-                            <ol class="items">
-                                <li>
-                                    <a href="shop-single-product-v1.html" class="product-image">
-                                        <asset:image src="MGShop/products/men_06.jpg" alt="Sample Product "/>
-                                    </a>
-                                    <div class="product-details">
-                                        <div class="close-icon">
-                                            <a href="javascript:void(0);"><i class="fa fa-close"></i></a>
-                                        </div>
-                                        <p class="product-name">
-                                            <a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>
-                                        </p>
-                                        <strong>1</strong> x <span class="price text-primary">$59.99</span>
-                                    </div><!-- end product-details -->
-                                </li><!-- end item -->
-                                <li>
-                                    <a href="shop-single-product-v1.html" class="product-image">
-                                        <asset:image src="MGShop/products/shoes_01.jpg" alt="Sample Product "/>
-                                    </a>
-                                    <div class="product-details">
-                                        <div class="close-icon">
-                                            <a href="javascript:void(0);"><i class="fa fa-close"></i></a>
-                                        </div>
-                                        <p class="product-name">
-                                            <a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>
-                                        </p>
-                                        <strong>1</strong> x <span class="price text-primary">$39.99</span>
-                                    </div><!-- end product-details -->
-                                </li><!-- end item -->
-                                <li>
-                                    <a href="shop-single-product-v1.html" class="product-image">
-                                        <asset:image src="MGShop/products/bags_07.jpg" alt="Sample Product "/>
-                                    </a>
-                                    <div class="product-details">
-                                        <div class="close-icon">
-                                            <a href="javascript:void(0);"><i class="fa fa-close"></i></a>
-                                        </div>
-                                        <p class="product-name">
-                                            <a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>
-                                        </p>
-                                        <strong>1</strong> x <span class="price text-primary">$29.99</span>
-                                    </div><!-- end product-details -->
-                                </li><!-- end item -->
-                            </ol>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="cart-footer">
-                            <a href="cart.html" class="pull-left"><i class="fa fa-cart-plus mr-5"></i>Ver Carrito</a>
-                            <a href="checkout.html" class="pull-right"><i class="fa fa-shopping-basket mr-5"></i>Checkout</a>
-                        </div>
-                    </li>
-                </ul>
-            </li>
+            %{--<li class="linkdown">--}%
+                %{--<a href="javascript:void(0);">--}%
+                    %{--<i class="fa fa-shopping-basket mr-5"></i>--}%
+                    %{--<span class="hidden-xs">--}%
+                        %{--Cart<sup class="text-primary">(3)</sup>--}%
+                        %{--<i class="fa fa-angle-down ml-5"></i>--}%
+                    %{--</span>--}%
+                %{--</a>--}%
+                %{--<ul class="cart w-250">--}%
+                    %{--<li>--}%
+                        %{--<div class="cart-items">--}%
+                            %{--<ol class="items">--}%
+
+
+                                %{--<li>--}%
+                                    %{--<a href="shop-single-product-v1.html" class="product-image">--}%
+                                        %{--<asset:image src="MGShop/products/men_06.jpg" alt="Sample Product "/>--}%
+                                    %{--</a>--}%
+                                    %{--<div class="product-details">--}%
+                                        %{--<div class="close-icon">--}%
+                                            %{--<a href="javascript:void(0);"><i class="fa fa-close"></i></a>--}%
+                                        %{--</div>--}%
+                                        %{--<p class="product-name">--}%
+                                            %{--<a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>--}%
+                                        %{--</p>--}%
+                                        %{--<strong>1</strong> x <span class="price text-primary">$59.99</span>--}%
+                                    %{--</div><!-- end product-details -->--}%
+                                %{--</li><!-- end item -->--}%
+                                %{--<li>--}%
+                                    %{--<a href="shop-single-product-v1.html" class="product-image">--}%
+                                        %{--<asset:image src="MGShop/products/shoes_01.jpg" alt="Sample Product "/>--}%
+                                    %{--</a>--}%
+                                    %{--<div class="product-details">--}%
+                                        %{--<div class="close-icon">--}%
+                                            %{--<a href="javascript:void(0);"><i class="fa fa-close"></i></a>--}%
+                                        %{--</div>--}%
+                                        %{--<p class="product-name">--}%
+                                            %{--<a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>--}%
+                                        %{--</p>--}%
+                                        %{--<strong>1</strong> x <span class="price text-primary">$39.99</span>--}%
+                                    %{--</div><!-- end product-details -->--}%
+                                %{--</li><!-- end item -->--}%
+                                %{--<li>--}%
+                                    %{--<a href="shop-single-product-v1.html" class="product-image">--}%
+                                        %{--<asset:image src="MGShop/products/bags_07.jpg" alt="Sample Product "/>--}%
+                                    %{--</a>--}%
+                                    %{--<div class="product-details">--}%
+                                        %{--<div class="close-icon">--}%
+                                            %{--<a href="javascript:void(0);"><i class="fa fa-close"></i></a>--}%
+                                        %{--</div>--}%
+                                        %{--<p class="product-name">--}%
+                                            %{--<a href="shop-single-product-v1.html">Lorem Ipsum dolor sit</a>--}%
+                                        %{--</p>--}%
+                                        %{--<strong>1</strong> x <span class="price text-primary">$29.99</span>--}%
+                                    %{--</div><!-- end product-details -->--}%
+                                %{--</li><!-- end item -->--}%
+                            %{--</ol>--}%
+                        %{--</div>--}%
+                    %{--</li>--}%
+                    %{--<li>--}%
+                        %{--<div class="cart-footer">--}%
+                            %{--<a href="cart.html" class="pull-left"><i class="fa fa-cart-plus mr-5"></i>Ver Carrito</a>--}%
+                            %{--<a href="checkout.html" class="pull-right"><i class="fa fa-shopping-basket mr-5"></i>Checkout</a>--}%
+                        %{--</div>--}%
+                    %{--</li>--}%
+                %{--</ul>--}%
+            %{--</li>--}%
         </ul>
     </div><!-- end container -->
 </div>
@@ -188,10 +190,10 @@
         </div>
         <div id="navbar-collapse-3" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Tienda</a></li>
+                <li class="dropdown active"><a href="/">Tienda</a></li>
 
 
-                <li class="dropdown active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Productos<i class="fa fa-angle-down ml-5"></i></a>
+                <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Productos<i class="fa fa-angle-down ml-5"></i></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a href="/producto/crearProducto">Crear producto</a></li>
                         <li><a href="home-v2.html">Listado de productos</a></li>
@@ -230,8 +232,8 @@
                         <i class="fa fa-truck text-gray"></i>
                     </div><!-- end icon -->
                     <div class="box-content">
-                        <h6 class="alt-font text-light text-uppercase">Free Shipping</h6>
-                        <p class="text-gray">Aenean semper lacus sed molestie sollicitudin.</p>
+                        <h6  class="alt-font text-light text-uppercase">Envio Gratis</h6>
+                        <p class="text-gray">Aprovecha nuestras ofertas!!</p>
                     </div>
                 </div><!-- icon-box -->
             </div><!-- end col -->
@@ -241,21 +243,28 @@
                         <i class="fa fa-life-ring text-gray"></i>
                     </div><!-- end icon -->
                     <div class="box-content">
-                        <h6 class="alt-font text-light text-uppercase">Support 24/7</h6>
-                        <p class="text-gray">Aenean semper lacus sed molestie sollicitudin.</p>
+                        <h6 class="alt-font text-light text-uppercase">Soporte 24/7</h6>
+                        <p class="text-gray">Mantente en contacto con nosotros!</p>
                     </div>
                 </div><!-- icon-box -->
             </div><!-- end col -->
+            %{--<div class="col-sm-3">--}%
+                %{--<div class="icon-boxes style1">--}%
+                    %{--<div class="icon">--}%
+                        %{--<i class="fa fa-gift text-gray"></i>--}%
+                    %{--</div><!-- end icon -->--}%
+                    %{--<div class="box-content">--}%
+                        %{--<h6 class="alt-font text-light text-uppercase"></h6>--}%
+                        %{--<p class="text-gray">Aenean semper lacus sed molestie sollicitudin.</p>--}%
+                    %{--</div>--}%
+                %{--</div><!-- icon-box -->--}%
+            %{--</div><!-- end col -->--}%
             <div class="col-sm-3">
-                <div class="icon-boxes style1">
-                    <div class="icon">
-                        <i class="fa fa-gift text-gray"></i>
-                    </div><!-- end icon -->
-                    <div class="box-content">
-                        <h6 class="alt-font text-light text-uppercase">Gift cards</h6>
-                        <p class="text-gray">Aenean semper lacus sed molestie sollicitudin.</p>
-                    </div>
-                </div><!-- icon-box -->
+            <h6 class="alt-font text-light text-uppercase">Métodos de pago</h6>
+                <p>Utiliza PAYPAL, y aprovecha todas nuestras ofertas!</p>
+                <ul class="list list-inline">
+                    <li class="text-white"><i class="fa fa-cc-paypal fa-2x"></i></li>
+                </ul>
             </div><!-- end col -->
             <div class="col-sm-3">
                 <div class="icon-boxes style1">
@@ -263,8 +272,8 @@
                         <i class="fa fa-credit-card text-gray"></i>
                     </div><!-- end icon -->
                     <div class="box-content">
-                        <h6 class="alt-font text-light text-uppercase">Payment 100% Secure</h6>
-                        <p class="text-gray">Aenean semper lacus sed molestie sollicitudin.</p>
+                        <h6 class="alt-font text-light text-uppercase">Pagos 100% seguros</h6>
+                        <p class="text-gray">No tengas miedo a hacer compras EN LINEA!</p>
                     </div>
                 </div><!-- icon-box -->
             </div><!-- end col -->
@@ -272,57 +281,57 @@
 
         <hr class="spacer-30">
 
-        <div class="row">
-            <div class="col-sm-3">
-                <h5 class="title">Plus</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, libero a molestie consectetur, sapien elit lacinia mi.</p>
+        %{--<div class="row">--}%
+            %{--<div class="col-sm-3">--}%
+                %{--<h5 class="title">Plus</h5>--}%
+                %{--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, libero a molestie consectetur, sapien elit lacinia mi.</p>--}%
 
-                <hr class="spacer-10 no-border">
+                %{--<hr class="spacer-10 no-border">--}%
 
-                <ul class="social-icons">
-                    <li class="facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                    <li class="twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                    <li class="dribbble"><a href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li>
-                    <li class="linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="youtube"><a href="javascript:void(0);"><i class="fa fa-youtube"></i></a></li>
-                    <li class="behance"><a href="javascript:void(0);"><i class="fa fa-behance"></i></a></li>
-                </ul>
-            </div><!-- end col -->
-            <div class="col-sm-3">
-                <h5 class="title">My Account</h5>
-                <ul class="list alt-list">
-                    <li><a href="my-account.html"><i class="fa fa-angle-right"></i>My Account</a></li>
-                    <li><a href="wishlist.html"><i class="fa fa-angle-right"></i>Wishlist</a></li>
-                    <li><a href="cart.html"><i class="fa fa-angle-right"></i>My Cart</a></li>
-                    <li><a href="checkout.html"><i class="fa fa-angle-right"></i>Checkout</a></li>
-                </ul>
-            </div><!-- end col -->
-            <div class="col-sm-3">
-                <h5 class="title">Information</h5>
-                <ul class="list alt-list">
-                    <li><a href="about-us-v1.html"><i class="fa fa-angle-right"></i>About Us</a></li>
-                    <li><a href="faq.html"><i class="fa fa-angle-right"></i>FAQ</a></li>
-                    <li><a href="privacy-policy.html"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>
-                    <li><a href="contact-v1.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>
-                </ul>
-            </div><!-- end col -->
-            <div class="col-sm-3">
-                <h5 class="title">Payment Methods</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <ul class="list list-inline">
-                    <li class="text-white"><i class="fa fa-cc-visa fa-2x"></i></li>
-                    <li class="text-white"><i class="fa fa-cc-paypal fa-2x"></i></li>
-                    <li class="text-white"><i class="fa fa-cc-mastercard fa-2x"></i></li>
-                    <li class="text-white"><i class="fa fa-cc-discover fa-2x"></i></li>
-                </ul>
-            </div><!-- end col -->
-        </div><!-- end row -->
+                %{--<ul class="social-icons">--}%
+                    %{--<li class="facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>--}%
+                    %{--<li class="twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>--}%
+                    %{--<li class="dribbble"><a href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li>--}%
+                    %{--<li class="linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>--}%
+                    %{--<li class="youtube"><a href="javascript:void(0);"><i class="fa fa-youtube"></i></a></li>--}%
+                    %{--<li class="behance"><a href="javascript:void(0);"><i class="fa fa-behance"></i></a></li>--}%
+                %{--</ul>--}%
+            %{--</div><!-- end col -->--}%
+            %{--<div class="col-sm-3">--}%
+                %{--<h5 class="title">My Account</h5>--}%
+                %{--<ul class="list alt-list">--}%
+                    %{--<li><a href="my-account.html"><i class="fa fa-angle-right"></i>My Account</a></li>--}%
+                    %{--<li><a href="wishlist.html"><i class="fa fa-angle-right"></i>Wishlist</a></li>--}%
+                    %{--<li><a href="cart.html"><i class="fa fa-angle-right"></i>My Cart</a></li>--}%
+                    %{--<li><a href="checkout.html"><i class="fa fa-angle-right"></i>Checkout</a></li>--}%
+                %{--</ul>--}%
+            %{--</div><!-- end col -->--}%
+            %{--<div class="col-sm-3">--}%
+                %{--<h5 class="title">Information</h5>--}%
+                %{--<ul class="list alt-list">--}%
+                    %{--<li><a href="about-us-v1.html"><i class="fa fa-angle-right"></i>About Us</a></li>--}%
+                    %{--<li><a href="faq.html"><i class="fa fa-angle-right"></i>FAQ</a></li>--}%
+                    %{--<li><a href="privacy-policy.html"><i class="fa fa-angle-right"></i>Privacy Policy</a></li>--}%
+                    %{--<li><a href="contact-v1.html"><i class="fa fa-angle-right"></i>Contact Us</a></li>--}%
+                %{--</ul>--}%
+            %{--</div><!-- end col -->--}%
+            %{--<div class="col-sm-3">--}%
+                %{--<h5 class="title">Payment Methods</h5>--}%
+                %{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>--}%
+                %{--<ul class="list list-inline">--}%
+                    %{--<li class="text-white"><i class="fa fa-cc-visa fa-2x"></i></li>--}%
+                    %{--<li class="text-white"><i class="fa fa-cc-paypal fa-2x"></i></li>--}%
+                    %{--<li class="text-white"><i class="fa fa-cc-mastercard fa-2x"></i></li>--}%
+                    %{--<li class="text-white"><i class="fa fa-cc-discover fa-2x"></i></li>--}%
+                %{--</ul>--}%
+            %{--</div><!-- end col -->--}%
+        %{--</div><!-- end row -->--}%
 
         <hr class="spacer-30">
 
         <div class="row text-center">
             <div class="col-sm-12">
-                <p class="text-sm">&COPY; 2017. Made with <i class="fa fa-heart text-danger"></i> by <a href="javascript:void(0);">DiamondCreative.</a></p>
+                <p class="text-sm">&COPY; 2017. MGShop Todos los derechos reservados.</a></p>
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->

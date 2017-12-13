@@ -29,6 +29,15 @@ class UsuarioController {
     }
 
     def listadoUsuarios(){
-        [listadoUsuarios: Usuario.list()]
+        [listadoUsuarios: Usuario.findAllByHabilitado(true)]
+    }
+
+    def eliminarUsuario(String idUsuario){
+
+        Usuario usuario = Usuario.findById(Long.parseLong(idUsuario))
+        usuario.habilitado=false;
+        usuario.save(flush:true,failOnError:true)
+        redirect(uri:"/usuario/listadoUsuarios")
+
     }
 }
