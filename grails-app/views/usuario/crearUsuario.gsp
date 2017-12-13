@@ -52,6 +52,14 @@
                                         </div>
                                     </div><!-- end form-group -->
                                     <div class="form-group">
+                                        <label for="permisos" class="col-sm-2 control-label">Contraseña <span class="text-danger">*</span></label>
+                                        <div class="col-sm-10">
+                                            <g:select id="permisos" name="permisos" noSelection="['':'Seleccione un permiso']" class="form-control" from="${com.mgshop.domains.seguridad.Perfil.list()}" optionKey="id" optionValue="permisos" data-validation="required"/>
+
+                                        </div>
+                                    </div><!-- end form-group -->
+
+                                    <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10">
                                             <button type="summit" id="guardar"  class="btn btn-default round btn-md">Guardar</button>
                                             %{--<a href="javascript:void(0);" class="btn btn-default round btn-md"><i class="fa fa-user mr-5"></i> Registrar</a>--}%

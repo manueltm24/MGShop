@@ -12,6 +12,7 @@ class Perfil implements Serializable{
     private static final long serialVersionUID = 1
 
     String authority
+    String permisos
 
     static constraints = {
         authority nullable: false, blank: false, unique: true
