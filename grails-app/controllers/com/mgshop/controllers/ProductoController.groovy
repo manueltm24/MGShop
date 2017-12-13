@@ -44,6 +44,24 @@ class ProductoController {
 
     }
 
+    def procesarCrearProducto_Editar(String title, Integer quantity, double price){
+
+        Producto producto = Producto.findById(params.get("idProducto"))
+        producto.title = title
+        producto.quantity = quantity
+        producto.description = params.get("description")
+        producto.price = price
+
+
+
+
+        producto.save(failOnError: true, flush: true)
+
+
+        redirect(uri:"/")
+
+    }
+
     def render_image = {
         def product = Producto.get(params.id)
 
@@ -56,6 +74,19 @@ class ProductoController {
 
     def listadoProductos(){
         [listadoProductos: Producto.findAllByHabilitado(true)]
+
+    }
+    def eliminarProducto(String idProducto){
+
+        Producto producto = Producto.findById(Long.parseLong(idProducto))
+        producto.habilitado=false;
+        producto.save(flush:true,failOnError:true)
+        redirect(uri:"/producto/listadoProductos")
+
+    }
+
+    def editarProducto(String idProducto){
+        [producto: Producto.findById(Long.parseLong(idProducto))]
 
     }
 }

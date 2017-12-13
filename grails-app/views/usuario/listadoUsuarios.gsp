@@ -35,7 +35,7 @@
                                             <label>-</label>
                                         </g:if>
                                         <g:else>
-                                            <g:link action="#" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
+                                            <g:link action="editarUsuario" params="[idUsuario: usuario.id]" controller="usuario" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
 
                                             <g:form params="[idUsuario: usuario.id]" action="eliminarUsuario" >
                                                 <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>

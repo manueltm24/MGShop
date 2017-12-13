@@ -16,7 +16,14 @@ class TiendaController {
     def index() {
         Usuario usuario = (Usuario)springSecurityService.currentUser
 
-        [usuario:usuario,listadoProductos:Producto.findAllByHabilitado(true)]
+        List<Producto> productoList = new ArrayList<>()
+        Producto.findAllByHabilitado(true).each {
+            if(it.quantity>0){
+                productoList.add(it)
+            }
+        }
+
+        [usuario:usuario,listadoProductos:productoList]
     }
 
     def anadirCarrito(){

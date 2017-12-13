@@ -1,5 +1,6 @@
 package com.mgshop.controllers
 
+import com.mgshop.domains.Producto
 import com.mgshop.domains.seguridad.Perfil
 import com.mgshop.domains.seguridad.Usuario
 import com.mgshop.domains.seguridad.UsuarioPerfil
@@ -40,4 +41,30 @@ class UsuarioController {
         redirect(uri:"/usuario/listadoUsuarios")
 
     }
+    def editarUsuario(String idUsuario){
+        [usuario: Usuario.findById(Long.parseLong(idUsuario))]
+
+    }
+
+    def procesarNuevoUsuario_editar(long idUsuario,String username,String nombre, String correoElectronico, String password, String permisos){
+        Usuario usuario = Usuario.findById(idUsuario)
+        usuario.username=username
+        usuario.nombre=nombre
+        usuario.correoElectronico=correoElectronico
+        usuario.password=password
+
+        usuario.save(flush:true,failOnError:true)
+
+
+        UsuarioPerfil usuarioPerfil = UsuarioPerfil.findByUsuario(usuario)
+        usuarioPerfil.perfil = Perfil.findById(Long.parseLong(permisos))
+        usuarioPerfil.save(flush:true,failOnError:true)
+
+
+        redirect(uri:"/usuario/listadoUsuarios")
+
+    }
+
+
+    
 }

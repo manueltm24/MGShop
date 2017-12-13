@@ -17,22 +17,37 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Fotografía</th>
                                     <th>Nombre</th>
                                     <th>Cantidad existente</th>
+                                    <th>Precio</th>
                                     <th>Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <g:each in="${listadoProductos}" var="producto">
                                     <tr>
-                                        <th scope="row">${producto.id}</th>
+
+                                        <td scope="row">${producto.id}</td>
+                                        <td>
+                                            <a href="shop-single-product-v1.html">
+                                                <img
+                                                        src="/producto/render_image/${producto.id}"
+                                                        alt=""
+                                                        width="60px" />
+                                            </a>
+                                        </td>
+
                                         <td>${producto.title}</td>
                                         <td>${producto.quantity}</td>
                                         <td>
+                                            <span>$${producto.price}</span>
+                                        </td>
+                                        <td>
 
-                                            <g:link action="#" controller="producto" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
+                                            <g:link action="editarProducto" params="[idProducto: producto.id]" controller="producto" ><button type="button" class="btn btn-default round btn-md"><b>Editar</b></button></g:link>
 
-                                            <g:form params="[idProducto: producto.id]" action="eliminarUsuario" >
+                                            <g:form params="[idProducto: producto.id]" action="eliminarProducto" >
                                                 <button type="summit" class="btn btn-danger round btn-md">Eliminar</button>
                                             </g:form>
 
