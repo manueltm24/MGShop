@@ -1,5 +1,7 @@
 var myApp;
 var $$;
+var usuario_id;
+var data = {};
 
 var app = {
     
@@ -48,6 +50,9 @@ var app = {
                     success: function (response) {
                         if (response !== null || response !== undefined) {
                             mainView.router.load({ pageName: 'content' });
+                            usuario_id = response.id;
+                            console.log(usuario_id);
+                            setupData();
                         }
                     },
                     error: function (response) {
@@ -64,3 +69,26 @@ var app = {
         })
     }
 };
+
+function setupData() {
+    $.ajax({
+        url: 'http://192.168.0.114 :8080/API/restPedidosRealizados',
+        type: "POST",
+        method: "POST",
+        headers: {
+            'Content-Type':'application/json'
+        },
+        data: JSON.stringify({
+            usuario_id: usuario_id
+        }),
+        contentType: "application/json",
+        success: function (response) {
+            for(var i = 0; i < response.length; i++) {
+                $('#tabla').find('tbody').append('<tr><td>'+response[i].dateCreated+'</td><td>'+response[i].txnId+'</td><td>$ '+response[i].total+'.00</td></tr>');
+            }
+        },
+        error: function (response) {
+
+        }
+    });
+}

@@ -22,7 +22,7 @@ class ComprasRestController {
         if (Usuario.findById(usuarioJson.getAt("usuario_id") as Long) != null) {
             usuario = Usuario.findById(usuarioJson.getAt("usuario_id") as Long)
 
-            if (usuario.id == usuarioJson.getAt("usuario_id") && UsuarioPerfil.findByUsuarioAndPerfil(usuario, Perfil.findByAuthority("ROLE_ADMIN"))) {
+            if (UsuarioPerfil.findByUsuarioAndPerfil(usuario, Perfil.findByAuthority("ROLE_ADMIN"))) {
                 //Si es usuario entonces se le devuelve la data
 
                 render Compra.list() as JSON

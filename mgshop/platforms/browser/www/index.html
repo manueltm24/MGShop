@@ -22,6 +22,8 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
+    <access origin="*" subdomains="true"></access>
+
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
@@ -108,14 +110,25 @@
           <!-- About page -->
           <div class="page cached" data-page="content">
             <div class="page-content">
-              <div class="navbar">
+                <div class="navbar">
                     <div class="navbar-inner">
                         <div class="center">MGShop</div>
                     </div>
                 </div>
+
+                <div class="data-table data-table-init card" style="overflow: scroll;">
+                    <table id="tabla" name="tabla">
+                        <thead>
+                            <th>Fecha</th>
+                            <th>Transaccion ID</th>
+                            <th>Total</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-
 
             <div class="toolbar">
                 <div class="toolbar-inner">

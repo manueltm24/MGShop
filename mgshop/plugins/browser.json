@@ -36,6 +36,9 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.pucmm.programacionweb2017"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.pucmm.programacionweb2017"
     }
   },
   "dependent_plugins": {
