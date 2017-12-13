@@ -28,7 +28,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-10 col-lg-12">
                             <g:form action="procesarNuevoUsuario_editar" class="form-horizontal">
-                                <input hidden="hidden" type="text" class="form-control input-md" id="idUsuario"  value="${usuario.id}" name="idUsuario" placeholder="Nombre">
+                                <input hidden="hidden" value="${usuario.id}" type="text"  name="idUsuario" id="idUsuario" />
 
                                 <div class="form-group">
                                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
