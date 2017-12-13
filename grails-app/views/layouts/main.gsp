@@ -56,7 +56,7 @@
         <div class="row grid-space-0">
             <div class="col-sm-12">
                 <figure>
-                    <a href="category.html">
+                    <a href="/">
                         <asset:image src="MGShop/banners/top_banner.jpg" alt=""/>
                     </a>
                 </figure>
