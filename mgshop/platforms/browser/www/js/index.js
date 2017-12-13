@@ -37,9 +37,12 @@ var app = {
         $('#link_iniciar_sesion').on('touchend', function () {
             $('#link_iniciar_sesion').on('touchend', function () {
                 $.ajax({
-                    url: 'http://localhost:8080/API/restLogin',
+                    url: 'http://192.168.0.114:8080/API/restLogin',
                     type: "POST",
                     method: "POST",
+                    headers: {
+                        'Content-Type':'application/json'
+                    },
                     data: JSON.stringify($('#login_form').serializeObject()),
                     contentType: "application/json",
                     success: function (response) {
