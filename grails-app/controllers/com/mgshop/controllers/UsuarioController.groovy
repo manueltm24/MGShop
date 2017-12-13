@@ -56,9 +56,9 @@ class UsuarioController {
         usuario.save(flush:true,failOnError:true)
 
 
-        UsuarioPerfil usuarioPerfil = UsuarioPerfil.findByUsuario(usuario)
-        usuarioPerfil.perfil = Perfil.findById(Long.parseLong(permisos))
-        usuarioPerfil.save(flush:true,failOnError:true)
+//        UsuarioPerfil usuarioPerfil = UsuarioPerfil.findByUsuario(usuario)
+//        usuarioPerfil.perfil = Perfil.findById(Long.parseLong(permisos))
+//        usuarioPerfil.save(flush:true,failOnError:true)
 
 
         redirect(uri:"/usuario/listadoUsuarios")
