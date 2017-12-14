@@ -74,4 +74,20 @@ class CarritoController {
         redirect(uri:"/")
 
     }
+    def despachoCompras(){
+        [despachadas: Compra.findAllByHabilitadoAndEstadoDespacho(true,true), sinDespacho: Compra.findAllByHabilitadoAndEstadoDespacho(true,false)]
+    }
+
+    def realizarDespacho(String compraId){
+        Usuario usuario = (Usuario)springSecurityService.currentUser
+        Compra compra = Compra.findById(Long.parseLong(compraId))
+        compra.estadoDespacho=true
+        compra.modificadoPor=usuario.username
+        compra.save(failOnError: true, flush: true)
+        redirect(uri:"/carrito/despachoCompras")
+
+
+
+
+    }
 }

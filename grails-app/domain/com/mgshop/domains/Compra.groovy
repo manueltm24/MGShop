@@ -22,6 +22,8 @@ class Compra  implements Serializable {
     Date dateCreated;
     Date lastUpdated;
 
+    boolean estadoDespacho =false
+
     static belongsTo = [user: Usuario]
     static hasMany = [products: ArticuloCompra]
 

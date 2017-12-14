@@ -10,8 +10,8 @@ import org.springframework.web.multipart.MultipartFile
 class ProductoController {
 
 
-    def index() { }
-
+//    def index() { }
+//
 
     def crearProducto(){
 
@@ -76,6 +76,7 @@ class ProductoController {
         [listadoProductos: Producto.findAllByHabilitado(true)]
 
     }
+
     def eliminarProducto(String idProducto){
 
         Producto producto = Producto.findById(Long.parseLong(idProducto))

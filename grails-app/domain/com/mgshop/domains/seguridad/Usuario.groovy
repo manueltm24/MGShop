@@ -74,7 +74,7 @@ class Usuario  {
                         it.correoElectronico,
                         "MGShop Depacho de orden realizada",
                         "Se ha emitido una nueva orden, favor realizar el despacho de la orden"+compra.id,
-                        "<p>Se ha emitido una nueva orden, favor realizar el despacho de la orden"+compra.id+"</p>");
+                        "<p>Se ha emitido una nueva orden, favor realizar el despacho de la orden, LINK: http://localhost:8080/carrito/despachoCompras"+compra.id+"</p>");
             }
 
     }
