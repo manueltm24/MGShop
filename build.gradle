@@ -69,6 +69,10 @@ dependencies {
     compile "com.sparkpost:sparkpost-lib:0.19"
 
     compile "org.grails.plugins:grails-google-visualization:2.0"
+
+    compile group: 'org.olap4j', name: 'olap4j', version: '1.2.0'
+    compile group: 'com.lowagie', name: 'itext', version: '2.1.7'
+    compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.4.0'
 }
 
 bootRun {

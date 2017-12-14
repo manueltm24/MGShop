@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.3.final using JasperReports Library version 6.4.3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="960389e3-3984-464c-b255-eda7d4cd45f3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mgshop_jdbc"/>
+	<queryString language="SQL">
+		<![CDATA[select * from compra where estado_despacho = 1]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<field name="date_created" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="date_created"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<field name="total" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<field name="zip" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="zip"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<field name="txn_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="txn_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="compra"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="108" backcolor="#00F2FF" uuid="c5dc56e3-983c-4ade-a908-41d6b1bdd518"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="50" width="130" height="30" uuid="f8447ad4-e84d-475d-8be7-c433e35ec214"/>
+				<textFieldExpression><![CDATA["ID DE LA FACTURA:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="100" height="30" uuid="304a6f05-68b4-4a16-9ec5-479f386d8b41"/>
+				<textFieldExpression><![CDATA["FECHA:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="80" width="100" height="30" uuid="ea7e0410-5f6c-4ffc-9884-ed2ba3186efc"/>
+				<textFieldExpression><![CDATA["DIRECCION:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="50" width="100" height="30" uuid="b53ff312-d9f3-4960-9f62-49f326732544"/>
+				<textFieldExpression><![CDATA["CODIGO ZIP:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="50" width="100" height="30" uuid="0ab94fa0-d7a4-4d21-84ee-2d613ccc3001"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="30" uuid="d37de604-42b8-4c85-b472-7670a295afc0"/>
+				<textFieldExpression><![CDATA[$F{date_created}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="80" width="100" height="30" uuid="85164582-1a38-4712-a11e-12fa1db21ae9"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="50" width="100" height="30" uuid="c175b636-f340-4e7b-ab6a-83b81b5a6546"/>
+				<textFieldExpression><![CDATA[$F{zip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="330" height="30" uuid="12464cb1-2dbb-4084-93a1-6927c378a8c6"/>
+				<textFieldExpression><![CDATA["TIENDA MGSHOP"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="128" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="128" backcolor="#00F2FF" uuid="cf5b3939-da05-479a-b5e4-1f03c1ef85f7"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="30" width="100" height="30" uuid="11176488-0b41-4cf7-8324-f8120389fcd7"/>
+				<textFieldExpression><![CDATA["TRANSACCION:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="70" width="100" height="30" uuid="1974f19d-af56-4a44-904d-d9b75b90595b"/>
+				<textFieldExpression><![CDATA["TOTAL:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="30" width="444" height="30" uuid="10a70720-59ac-421a-ae8f-088f40c59d29">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87344e06-fe5e-499c-80db-b69153fb6739"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{txn_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="70" width="444" height="30" uuid="e95d479d-250d-40ff-afdd-d323d1910806">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0649541f-9894-44a3-8f64-d71f4ff4a7a0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
