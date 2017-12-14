@@ -48,6 +48,7 @@
     <asset:javascript src="MGShop/main.js"/>
     <asset:javascript src="Chart.bundle.min.js"/>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
     <g:pageProperty name="page.header"/></head>
 <body>
