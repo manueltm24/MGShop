@@ -93,12 +93,10 @@ class CarritoController {
         compra.modificadoPor=usuario.username
         compra.save(failOnError: true, flush: true)
 
-        realizarReportePDF()
-
         redirect(uri:"/carrito/despachoCompras")
     }
 
-    def realizarReportePDF() {
+    def generarFacturaPDF() {
         String hostName = "localhost"
         String dbName = "mgshopdev"
         String userName = "mgshop"
@@ -142,6 +140,7 @@ class CarritoController {
         exporter.exportReport()
 
         System.out.print("Reporte exportado!")
+        redirect(uri:"/")
     }
 }
 
