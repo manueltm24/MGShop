@@ -6,7 +6,7 @@ import com.mgshop.domains.seguridad.Usuario
 import com.mgshop.domains.seguridad.UsuarioPerfil
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(["ROLE_ADMIN", "ROLE_USUARIO"])
+@Secured(["ROLE_ADMIN", "ROLE_DEPARTAMENTOALMACEN","ROLE_CONSUMIDORFINAL","ROLE_PERSONAJURIDICA"])
 
 class UsuarioController {
 

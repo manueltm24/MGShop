@@ -3,7 +3,7 @@ package com.mgshop.controllers
 import com.mgshop.domains.Compra
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(["ROLE_ADMIN", "ROLE_USUARIO"])
+@Secured(["ROLE_ADMIN", "ROLE_DEPARTAMENTOALMACEN","ROLE_CONSUMIDORFINAL","ROLE_PERSONAJURIDICA"])
 class GraficosController {
 
     def index() {

@@ -96,9 +96,9 @@
                     </div><!-- end col -->
                 </div><!-- end row -->
 
-                <div class="col-sm-offset-2 col-sm-10">
-                    <g:link class="btn btn-default round btn-md" action="generarFacturaPDF">Generar factura</g:link>
-                </div>
+                %{--<div class="col-sm-offset-2 col-sm-10">--}%
+                    %{--<g:link class="btn btn-default round btn-md" action="generarFacturaPDF">Generar factura</g:link>--}%
+                %{--</div>--}%
 
             </div><!-- end container -->
         </section>

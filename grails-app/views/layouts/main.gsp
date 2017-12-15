@@ -195,12 +195,13 @@
                 <li><a href="/">Tienda</a></li>
 
 
-                <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Productos<i class="fa fa-angle-down ml-5"></i></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="/producto/crearProducto">Crear producto</a></li>
-                        <li><a href="/producto/listadoProductos">Listado de productos</a></li>
-                    </ul><!-- end ul dropdown-menu -->
-                </li><!-- end li dropdown -->
+                <sec:ifAnyGranted roles="ROLE_ADMIN">
+                    <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Productos<i class="fa fa-angle-down ml-5"></i></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="/producto/crearProducto">Crear producto</a></li>
+                            <li><a href="/producto/listadoProductos">Listado de productos</a></li>
+                        </ul><!-- end ul dropdown-menu -->
+                    </li><!-- end li dropdown -->
             <!-- Features -->
                 <li class="dropdown left"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Usuario<i class="fa fa-angle-down ml-5"></i></a>
                     <ul class="dropdown-menu">
@@ -208,8 +209,12 @@
                         <li><a href="/usuario/listadoUsuarios">Listado de usuarios</a></li>
                     </ul><!-- end ul dropdown-menu -->
                 </li><!-- end li dropdown -->
+
                 <li ><a href="/graficos/index">Gráficos</a></li>
-                <li ><a href="/carrito/despachoCompras">Despacho</a></li>
+                </sec:ifAnyGranted>
+                <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DEPARTAMENTOALMACEN">
+                    <li ><a href="/carrito/despachoCompras">Despacho</a></li>
+                </sec:ifAnyGranted>
 
             </ul><!-- end navbar-nav -->
         </div><!-- end navbar collapse -->
