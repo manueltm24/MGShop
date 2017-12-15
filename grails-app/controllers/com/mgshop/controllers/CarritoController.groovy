@@ -181,7 +181,6 @@ class CarritoController {
         } catch (Exception e) {
             println e
             println e.message
-            println "----PRINTED E -----"
         } finally {
             return pdfStream
         }

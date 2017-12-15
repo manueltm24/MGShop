@@ -57,17 +57,15 @@
 			<![CDATA[]]>
 		</queryString>
 	</subDataset>
-	<parameter name="dispatchNumber" class="java.lang.String"/>
-	<parameter name="customerName" class="java.lang.String"/>
-	<parameter name="customerEmail" class="java.lang.String"/>
-	<parameter name="customerAddress" class="java.lang.String"/>
-	<parameter name="customerCity" class="java.lang.String"/>
-	<parameter name="customerState" class="java.lang.String"/>
+	<parameter name="client" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="city" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="id" class="java.lang.String"/>
 	<field name="title" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
 	<field name="quantity" class="java.lang.String"/>
 	<title>
 		<band height="272" splitType="Stretch">
