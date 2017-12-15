@@ -7,10 +7,8 @@ import com.mgshop.domains.seguridad.Perfil
 import com.mgshop.domains.seguridad.Usuario
 import com.mgshop.domains.seguridad.UsuarioPerfil
 import grails.plugin.springsecurity.annotation.Secured
-import net.sf.jasperreports.engine.JasperCompileManager
-import net.sf.jasperreports.engine.JasperFillManager
-import net.sf.jasperreports.engine.JasperPrint
-import net.sf.jasperreports.engine.JasperReport
+import net.sf.jasperreports.engine.*
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource
 import net.sf.jasperreports.engine.export.JRPdfExporter
 import net.sf.jasperreports.export.*
 
@@ -93,6 +91,8 @@ class CarritoController {
         compra.modificadoPor=usuario.username
         compra.save(failOnError: true, flush: true)
 
+        generarDespachoPDF(compraId);
+
         redirect(uri:"/carrito/despachoCompras")
     }
 
@@ -141,6 +141,50 @@ class CarritoController {
 
         System.out.print("Reporte exportado!")
         redirect(uri:"/")
+    }
+
+    def generarDespachoPDF(String compraId) {
+        ByteArrayOutputStream pdfStream = null
+        try {
+            String reportName, jrxmlFileName, dotJasperFileName
+            jrxmlFileName = "despacho"
+            reportName = "/home/guhex/IdeaProjects/MGShop/mgshop_reports/despacho.jrxml"
+            dotJasperFileName = "/home/guhex/IdeaProjects/MGShop/mgshop_reports/despacho.jasper"
+            println reportName
+            // Report parameter
+
+            Map<String, Object> reportParam = new HashMap<String, Object>()
+            def c = Compra.findById(Long.parseLong(compraId))
+            def listItems = c.products
+
+            def dataSource = new JRBeanCollectionDataSource(listItems)
+
+            reportParam.put("client", c.user.nombre + " " + c.user.apellido)
+            reportParam.put("total",'$' + c.total as String)
+            reportParam.put("address", c.address)
+            reportParam.put("city", c.city)
+//            reportParam.put("invoiceDate",new Date())
+
+            // compiles jrxml
+            JasperCompileManager.compileReportToFile(reportName);
+            // fills compiled report with parameters and a connection
+            JasperPrint print = JasperFillManager.fillReport(dotJasperFileName, reportParam, dataSource);
+
+            pdfStream = new ByteArrayOutputStream();
+            // exports report to pdf
+            JRExporter exporter = new JRPdfExporter()
+            exporter.setParameter(JRExporterParameter.JASPER_PRINT, print)
+            exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, pdfStream) // your output goes here
+
+            exporter.exportReport()
+
+        } catch (Exception e) {
+            println e
+            println e.message
+            println "----PRINTED E -----"
+        } finally {
+            return pdfStream
+        }
     }
 }
 
